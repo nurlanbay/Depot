@@ -1,6 +1,6 @@
 package com.company.motorDepot.model;
 
-public class Truck implements Service {
+public class Truck {
     private Long id;
     private String name;
     private String driverName;

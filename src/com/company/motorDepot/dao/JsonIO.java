@@ -1,5 +1,6 @@
 package com.company.motorDepot.dao;
 
+import com.company.motorDepot.model.Driver;
 import com.company.motorDepot.model.Truck;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -43,5 +44,17 @@ public class JsonIO {
         return list;
     }
 
+    public static List<Driver> getDrivers() {
+        Map<String, List<Driver>> moviesMap = GSON.fromJson(readJson("drivers.json"),
+                new TypeToken<Map<String, List<Driver>>>() {
+                }.getType());
+
+        List<Driver> list = new ArrayList<>();
+
+        for (Map.Entry<String, List<Driver>> t : moviesMap.entrySet()) {
+            list.addAll(t.getValue());
+        }
+        return list;
+    }
 }
 
