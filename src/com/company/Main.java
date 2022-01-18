@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        JsonIO.getTrucks().forEach(System.out::println);
+//        JsonIO.getTrucks().forEach(System.out::println);
+        JsonIO.getDrivers().forEach(System.out::println);
     }
 }
